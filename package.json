@@ -1,0 +1,10 @@
+{
+  "name": "vinzz-login-api-neon",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Android login API and admin panel for Vercel + Neon Postgres",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "bcryptjs": "^3.0.2"
+  }
+}
