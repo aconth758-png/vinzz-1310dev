@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vinzz Admin</title>
+  <link rel="stylesheet" href="/admin/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Vinzz Admin</h1>
+      <p>Login API • Neon PostgreSQL</p>
+    </div>
+    <button id="logout" class="secondary hidden">Logout</button>
+  </header>
+
+  <section id="loginCard" class="card">
+    <h2>Admin Login</h2>
+    <input id="loginUser" placeholder="Username admin" autocomplete="username">
+    <input id="loginPass" type="password" placeholder="Password admin" autocomplete="current-password">
+    <button id="loginBtn">Login</button>
+    <div id="loginMsg" class="msg"></div>
+  </section>
+
+  <main id="panel" class="hidden">
+    <section class="card">
+      <div class="row between">
+        <div>
+          <h2>Maintenance</h2>
+          <p id="maintState">Memuat...</p>
+        </div>
+        <label class="switch"><input id="maint" type="checkbox"><span></span></label>
+      </div>
+      <input id="maintMsg" placeholder="Pesan maintenance">
+      <button id="saveMaint">Simpan Maintenance</button>
+    </section>
+
+    <section class="card">
+      <h2>Tambah User</h2>
+      <div class="grid">
+        <input id="uName" placeholder="Username">
+        <input id="uPass" type="password" placeholder="Password">
+        <input id="uDays" type="number" value="30" min="1" placeholder="Hari">
+        <input id="uLimit" type="number" value="1" min="1" placeholder="Device limit">
+      </div>
+      <button id="addUser">Tambah User</button>
+      <div id="userMsg" class="msg"></div>
+    </section>
+
+    <section class="card">
+      <div class="row between">
+        <h2>Users</h2>
+        <button id="refresh" class="secondary">Refresh</button>
+      </div>
+      <div id="users"></div>
+    </section>
+  </main>
+</div>
+<script src="/admin/admin.js"></script>
+</body>
+</html>
